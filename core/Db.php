@@ -6,6 +6,7 @@ use PDO;
 class Db 
 {
     private static null|object $db;
+    private 
 
     public static function init($hostname, $username, $password, $database):bool
     {
@@ -14,5 +15,10 @@ class Db
 
         if(!self::$db) throw new ErrorException('NO_SQL_CONNECTION');
         return true;
+    }
+
+    public static function insert($table, $params)
+    {
+        $sql
     }
 }
